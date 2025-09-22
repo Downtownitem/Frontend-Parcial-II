@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Lista de Tareas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/tasklist.css">
+    <link rel="stylesheet" href="css/todo-list.css">
+</head>
+
+<body>
+    <div class="glass-container">
+        <div class="todo-container">
+            <header class="todo-header">
+                <h1>
+                    <i class="fas fa-tasks"></i>
+                    Mi Lista de Tareas
+                </h1>
+                <button id="logoutBtn" class="logout-btn" type="button">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Cerrar Sesión
+                </button>
+            </header>
+
+            <main class="todo-main">
+                <section class="todo-form-section">
+                    <form id="todoForm" class="todo-form">
+                        <div class="input-wrapper">
+                            <input type="text" id="todoInput" class="todo-input"
+                                placeholder="Escribe una nueva tarea (mínimo 10 caracteres)">
+                            <i class="fas fa-plus-circle input-icon"></i>
+                        </div>
+                        <button type="submit" class="add-btn">
+                            <i class="fas fa-plus"></i>
+                            Agregar
+                        </button>
+                    </form>
+                    <div id="todoError" class="error-message hidden"></div>
+                </section>
+
+                <section class="todo-list-section">
+                    <div id="userTodosSection">
+                        <h2 class="section-title">
+                            <i class="fas fa-user-edit"></i>
+                            Mis Tareas
+                        </h2>
+                        <div id="userTodoList" class="todo-list"></div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="scripts/tasklist.js"></script>
+</body>
+
+</html>
